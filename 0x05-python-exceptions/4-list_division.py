@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     new_list = []
-    tem_result = 0
+    temp_result = 0
     for i in range(0, list_length):
         try:
-            tem_result = my_list_1[i] / my_list_2[i]
+            temp_result = my_list_1[i] / my_list_2[i]
         except TypeError:
             temp_result = 0
             print("wrong type")
