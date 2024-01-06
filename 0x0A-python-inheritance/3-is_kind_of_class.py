@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Return instance of specified class of the parent 
-    of that class"""
+"""Return instance of specified class of the parent of that class"""
 
 
 def is_kind_of_class(obj, a_class):
@@ -8,7 +7,7 @@ def is_kind_of_class(obj, a_class):
     Args:
         obj (any): the object to be compared
         a_class (type): the class that obj is compared to
-    Return:
+    Returns:
         Bolean of an instance of a class
     """
     if isinstance(obj, a_class):
