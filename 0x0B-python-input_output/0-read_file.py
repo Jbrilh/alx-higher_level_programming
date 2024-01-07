@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""function to read file"""
+"""Defines read file module """
 
 
 def read_file(filename=""):
     """
     read_file function
-    reads a text file (UTF-8) and prints its result to stdout
+    reads a text file (UTF8) and prints it result to stdout
     """
-    with open(filename, mode='r', encoding="utf-8") as myFile:
-        print(myFile.read(), end='')
+    with open(filename, mode='r', encoding='utf-8') as f:
+        print(f.read(), end='')
