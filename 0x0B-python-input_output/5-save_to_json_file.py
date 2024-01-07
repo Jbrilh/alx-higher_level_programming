@@ -7,6 +7,5 @@ def save_to_json_file(my_obj, filename):
     """
     save_to_json_file: function to save obj ot file
     """
-    son = json.dumps(my_obj)
     with open(filename, mode='w', encoding="utf-8") as myFile:
-        myFile.write(son)
+        json.dump(my_obj, myFile, ensure_ascii=False)
