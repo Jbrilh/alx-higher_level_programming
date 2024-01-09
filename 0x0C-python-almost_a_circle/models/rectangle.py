@@ -10,7 +10,6 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """class constructor initalized"""
         self.__width = width
         self.__height = height
         self.__x = x
@@ -19,40 +18,43 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """funciton to get width value"""
+        """
+            funciton to get width value
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """function to set widht value
-        Args:
-            value (int): value to set to width
+        """
+             function to set widht value
         """
         self.__width = value
 
     @property
     def height(self):
-        """funciton to get height value"""
+        """
+            funciton to get height value
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """function to set height value
-        Args:
-            value (int): value to set to height
+        """
+            function to set height value
         """
         self.__height = value
 
     @property
     def x(self):
-        """funciton to get height x"""
+        """
+            funciton to get height x
+        """
         return self.__x
 
     @x.setter
-    def height(self, value):
-        """function to set x value
-        Args:
-            value (int): value to set to x
+    def x(self, value):
+        """
+            function to set x value
         """
         self.__x = value
 
