@@ -28,10 +28,7 @@ class Rectangle(Base):
         """
              function to set widht value
         """
-        if not isinstance(value, int):
-            raise TypeError('width must be an integer')
-        elif value <= 0:
-            raise ValueError("widht must be > 0")
+        self.setter_validator("width", value)
         self.__width = value
 
     @property
@@ -46,10 +43,7 @@ class Rectangle(Base):
         """
             function to set height value
         """
-        if not isinstance(value, int):
-            raise TypeError('height must be an integer')
-        elif value <= 0:
-            raise ValueError("height must be > 0")
+        self.setter_validator("height", value)
         self.__height = value
 
     @property
@@ -64,10 +58,7 @@ class Rectangle(Base):
         """
             function to set x value
         """
-        if not isinstance(x, int):
-            raise TypeError('x must be an integer')
-        elif value < 0:
-            raise ValueError("x must be >= 0")
+        self.setter_validator("x", value)
         self.__x = value
 
     @property
@@ -80,8 +71,15 @@ class Rectangle(Base):
         """function to set y value
             value (int): value to set to y
         """
-        if not isinstance(value, int):
-            raise TypeError('y must be an integer')
-        elif value < 0:
-            raise ValueError("widht must be >= 0")
+        self.setter_validator("y", value)
         self.__y = value
+
+    @staticmethod
+    def setter_validator(attribute, value):
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(attribute))
+        if attribute == "x" or attribute == "y":
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(attribute))
+        elif value <= 0:
+                raise ValueError("{} must be > 0".format(attribute))
