@@ -1,1 +1,1 @@
-solutions to tasks on python - Network #0
+solutions to tasks on pythons - Network #0 updated
